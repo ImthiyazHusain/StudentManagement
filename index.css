@@ -60,8 +60,8 @@ nav {
 }
 
 .opptions {
-  margin-left: 10%;
-  width: 450px;
+  margin-left: 16.6%;
+  width: 500px;
   display: flex;
 }
 .opptions button {
@@ -80,7 +80,7 @@ nav {
   background-color: #32d5835e;
   transition: all 0.15s;
 }
-.opptions button:first-child {
+.opptions a:first-child {
   border: 3px solid #32d583;
   border-top: 0px;
   border-left: 0px;
@@ -402,6 +402,22 @@ nav {
     background-color: #a0a5a359;
     color: #121927;
   }
+}
+
+.AttendanceSubmit{
+  padding: 10px 22px;
+  position: absolute;
+  right: 50px;
+  bottom: 0px;
+  background-color: rgb(255, 199, 57);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  margin: 20px 0px;
+  cursor: pointer;
+}
+
+.AttendanceSubmit:active{
+  border: 1px solid rgb(70, 70, 70);
 }
 
 .students-ITA {
