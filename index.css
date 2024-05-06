@@ -376,32 +376,21 @@ nav {
   padding: 0px 10px;
   border-radius: 10px;
   box-shadow: 0px 0px 5px gray;
-
-  form {
-    display: inline;
-  }
-  .button {
-    border: none;
-    color: white;
-    padding: 10px 22px;
-    text-align: center;
-    text-decoration: none;
-    display: inline;
-    font-size: 12px;
-    margin: 12px;
-    cursor: pointer;
-    border-radius: 8px;
-  }
-  .button01 {
-    background-color: #32d583;
-  }
-  .button02 {
-    background-color: #f44336;
-  }
-  .button.disabled {
-    background-color: #a0a5a359;
-    color: #121927;
-  }
+}
+.std-card .button{
+  width: 90px;
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  display: inline;
+  font-size: 12px;
+  margin: 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #32d583;
+}
+.std-card .button.red {
+  background-color: #f44336;
 }
 
 .AttendanceSubmit{
@@ -453,11 +442,6 @@ nav {
     border-radius: 8px;
   }
 }
-
-.students-ITA {
-  padding: 20px;
-}
-
 /* media (respect to screen width )*/
 
 @media screen and (max-width: 910px) {
@@ -557,5 +541,26 @@ nav {
   .notice-hod,
   .query-hod {
     margin-top: 15px;
+  }
+  .atttendance-sidebar {
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    button{
+      width: 30%;
+      margin: 0px;
+    }
+  }
+  .students-ITA{
+    padding: 20px 0px;
+    margin:auto;
+  }
+  .day-period {
+    margin: 85px auto 0px 32px;
   }
 } 
