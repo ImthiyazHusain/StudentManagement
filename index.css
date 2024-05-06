@@ -20,6 +20,7 @@ html {
   background-color: rgb(250, 250, 250);
   padding-top: 50px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding-bottom: 30px;
 }
 
 * {
@@ -330,16 +331,6 @@ nav {
   justify-content: space-between;
 }
 
-.footer-dashboard {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  background-color: #121927;
-  color: #32d583;
-  margin-top: 15%;
-  padding: 20px 10%;
-}
-
 .atttendance-sidebar {
   position: fixed;
   top: 50px;
@@ -562,5 +553,8 @@ nav {
   }
   .day-period {
     margin: 85px auto 0px 32px;
+  }
+  .container-StudentList{
+    margin-top: 60px;
   }
 } 
