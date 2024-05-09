@@ -320,6 +320,9 @@ nav {
 .top5Students .graph-row2 .no5 {
   display: flex;
   justify-content: space-between;
+  p{
+    color: #32d583;
+  }
 }
 
 .least5Students .graph-row2 .no1,
@@ -329,6 +332,9 @@ nav {
 .least5Students .graph-row2 .no5 {
   display: flex;
   justify-content: space-between;
+  p{
+    color: #32d583;
+  }
 }
 
 .atttendance-sidebar  ,.studentList-sidebar{
