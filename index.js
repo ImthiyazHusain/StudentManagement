@@ -92,15 +92,12 @@ function displayDashboard() {
   studentList.style.display = "none";
   title.innerHTML = "Dashboard";
   let attendanceButton = document.querySelector("a:nth-child(2)");
-  attendanceButton.style.border = "none";
+  attendanceButton.style.boxShadow = "none";
   let studentListButton = document.querySelector("a:nth-child(3)");
-  studentListButton.style.border = "none";
+  studentListButton.style.boxShadow = "none";
   let dashboardButton = document.querySelector("a:nth-child(1)");
-  dashboardButton.style.border = "3px solid #32d583";
-  dashboardButton.style.borderTop = "0px";
-  dashboardButton.style.borderLeft = "0px";
-  dashboardButton.style.borderRight = "0px";
-  dashboardButton.style.transition = "all 0s";
+  dashboardButton.style.boxShadow="inset 0px -3px 0px #32d583"  ;
+  dashboardButton.style.transition = "all 0.30s";
 }
 
 function displayAttendance() {
@@ -109,15 +106,12 @@ function displayAttendance() {
   studentList.style.display = "none";
   title.innerHTML = "Attendance";
   let dashboardButton = document.querySelector("a:nth-child(1)");
-  dashboardButton.style.border = "none";
+  dashboardButton.style.boxShadow = "none";
   let studentListButton = document.querySelector("a:nth-child(3)");
-  studentListButton.style.border = "none";
+  studentListButton.style.boxShadow = "none";
   let attendanceButton = document.querySelector("a:nth-child(2)");
-  attendanceButton.style.border = "3px solid #32d583";
-  attendanceButton.style.borderTop = "0px";
-  attendanceButton.style.borderLeft = "0px";
-  attendanceButton.style.borderRight = "0px";
-  attendanceButton.style.transition = "all 0s";
+  attendanceButton.style.boxShadow="inset 0px -3px 0px #32d583"  ;
+  attendanceButton.style.transition = "all 0.30s";
 }
 
 function displayStudentList() {
@@ -126,15 +120,12 @@ function displayStudentList() {
   studentList.style.display = "block";
   title.innerHTML = "Student List";
   let dashboardButton = document.querySelector("a:nth-child(1)");
-  dashboardButton.style.border = "none";
+  dashboardButton.style.boxShadow = "none";
   let attendanceButton = document.querySelector("a:nth-child(2)");
-  attendanceButton.style.border = "none";
+  attendanceButton.style.boxShadow = "none";
   let studentListButton = document.querySelector("a:nth-child(3)");
-  studentListButton.style.border = "3px solid #32d583";
-  studentListButton.style.borderTop = "0px";
-  studentListButton.style.borderLeft = "0px";
-  studentListButton.style.borderRight = "0px";
-  studentListButton.style.transition = "all 0s";
+  studentListButton.style.boxShadow="inset 0px -3px 0px #32d583"  ;
+  studentListButton.style.transition = "all 0.30s";
 }
 
 function sideBarOpen() {

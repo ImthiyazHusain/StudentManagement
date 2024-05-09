@@ -61,7 +61,7 @@ nav {
 }
 
 .opptions {
-  margin-left: 16.6%;
+  margin-left: 16%;
   width: 500px;
   display: flex;
 }
@@ -70,7 +70,7 @@ nav {
   color: white;
   border: none;
   cursor: pointer;
-  padding: 16px;
+  padding: 17.5px;
 
   a {
     text-decoration: none;
@@ -82,10 +82,7 @@ nav {
   transition: all 0.15s;
 }
 .opptions a:first-child {
-  border: 3px solid #32d583;
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
+  box-shadow: inset 0px -3px 0px #32d583 ;
 }
 
 .space {
