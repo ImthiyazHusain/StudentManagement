@@ -6,6 +6,13 @@
     <title class="title">Dashboard</title>
     <link rel="icon" type="image/png" href="./images/logo.png" />
     <link rel="stylesheet" href="./index.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" > </script>
+    <script type="text/javascript">
+      (function() {
+      emailjs.init("1GoZZLt6gqfYwV0VB");
+      })(); 
+</script>
+
   </head>
   <body>
     <section class="top">
@@ -485,404 +492,779 @@
       </section>
 
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-      <script src="./charts.js"></script>
-      <script src="./menu.js"></script>
 
     </div>
     <div class="container-Attendance">
-      <section class="atttendance-sidebar">
-        <button>Attendance</button>
-        <button>Absentees</button>
+      <section class="attendance-sidebar">
+        <button onclick="showAttendance()" class="attBackColor">Attendance</button>
+        <button onclick="showAbsentees()" class="absentBackColor">Absentees</button>
       </section>
+      <section class="Attendance">
 
-      <section class="day-period">
-        <select name="day" id="day">
-          <option value="today">Today</option>
-        </select>
-        <select name="period" id="period" onchange="toggleButton()">
-          <option value="">period</option>
-          <hr />
-          <option value="1st" selected>1st</option>
-          <option value="2st">2st</option>
-          <option value="3st">3st</option>
-          <option value="4st">4st</option>
-          <option value="5st">5st</option>
-          <option value="6st">6st</option>
-          <option value="7st">7st</option>
-          <option value="8st">8st</option>
-        </select>
+        <section class="day-period">
+          <select name="day" id="day">
+            <option value="today">Today</option>
+          </select>
+          <select name="period" id="period" onchange="toggleButton()">
+            <option value="">period</option>
+            <hr />
+            <option value="1st" selected>1st</option>
+            <option value="2st">2st</option>
+            <option value="3st">3st</option>
+            <option value="4st">4st</option>
+            <option value="5st">5st</option>
+            <option value="6st">6st</option>
+            <option value="7st">7st</option>
+            <option value="8st">8st</option>
+          </select>
+        </section>
+
+        <section class="Att-students-ITA">
+          <section class="std-card">
+            <h3>1. ABINAV D.S</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'1')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>2. ABINAYASRI G</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'2')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>3. ABINESH R</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'3')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>4. ABISORNAM M</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'4')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>5. ADHITHYA PRANAVE SK</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'5')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>6. AJAY P</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'6')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>7. AJAY KUMAR D</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'7')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>8. AKASH D</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'8')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>9. AMMAR H</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'9')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>10. ANIKA V</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'10')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>11. ANISABARVIN A</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'11')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>12. ARCHANA GURUSAMY</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'12')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>13. ARUNTHATHI S</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'13')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>14. ASHWIN KUMAAR D</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'14')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>15. ASHWIN</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'15')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>16. BALAADITHYA P</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'16')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>17. BALAJI S</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'17')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>18. BALASUBIRAMANIYAN P</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'18')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>19. BARATH R</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'19')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>20. BHARANIDHARAN S</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'20')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>21. BARATH GANESH K</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'21')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>22. BHAVADHARANI S</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'22')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>23. BHUVANASHRI SK</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'23')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>24. BOOPALAN M</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'24')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>25. BRINDHAA P</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'25')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>26. DEEPAK RG</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'26')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>27. DEEPAK T</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'27')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>28. DEEPIKA S</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'28')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>29. DEEPIKA RANI K</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'29')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>30. DHAKSINYAA MD</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'30')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>31. DHANYA K</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'31')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>32. DHARANEESH S</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'32')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>33. DHARSHAN R</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'33')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>34. DHIVYA S</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'34')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>35. DHIVYA V</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'35')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>36. DIVYA P</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'36')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>37. ELAKKIYA M</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'37')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>38. ELAYABHARATHI K</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'38')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>39. FLINTOFF J</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'39')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>40. GAYATHRI G</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'40')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>41. GOKILAVANI M</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'41')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>42. GOKUL K</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'42')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>43. GOPALAKRISHNAN M</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'43')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>44. GOPINATH P</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'44')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>45. GOWSIK P</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'45')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>46. GUNASEKARAPANDIYAN S</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'46')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>47. HAK ASHIQ M</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'47')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>48. HARINI M</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'48')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>49. HEMALATHA PN</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'49')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>50. IMTHIYAZ HUSAIN A</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'50')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>51. JEYCHARAN P</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'51')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>52. JOTHIGA S</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'52')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>53. JUSTUS FABY JEYAKUMAR</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'53')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>54. KAARTHIKEYAN B</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'54')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>55. KAMESH J</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'55')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>56. KAVIN RAJ S</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'56')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>57. KAVINIYA M</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'57')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>58. KAVINRAJ M</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'58')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>59. KIRUTHIGA M</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'59')">Present</button>
+            </section>
+          </section>
+          <section class="std-card">
+            <h3>60. KRISHNA BHARATHI P</h3>
+            <section class="buttons">
+              <button class="button" onclick="att(this,'60')">Present</button>
+            </section>
+          </section>
+          <button
+            class="AttendanceSubmit"
+            type="button"
+            onclick="sub()"
+          >
+            Submit
+          </button>
+        </section>
+        <p id="output" style="margin-left: 20%"></p>
+
       </section>
-
-      <section class="students-ITA">
-        <section class="std-card">
+      <section class="Absentees">
+        <section id="1" class="std-card-list" style="display: none;">
           <h3>1. ABINAV D.S</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <form id="contact-form-1" style="height: 10%;">
+              <label for="name-1" hidden>Name:</label>
+              <input type="text" id="name-1" name="name" value="ABINAV D.S" hidden><br>
+              <label for="email-1" hidden>Email:</label>
+              <input type="email" id="email-1" name="email" value="barathramesh26@gmail.com" hidden><br>
+              <button class="button" type="button" onclick="sendemail('contact-form-1')">Send</button>
+            </form>
           </section>
         </section>
-        <section class="std-card">
+        <section id="2" class="std-card-list" style="display: none;">
           <h3>2. ABINAYASRI G</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <form id="contact-form-2" style="height: 10%;">
+              <label for="name-2" hidden>Name:</label>
+              <input type="text" id="name-2" name="name" value="ABINAYASRI G" hidden><br>
+              <label for="email-2" hidden>Email:</label>
+              <input type="email" id="email-2" name="email" value="imthiyazhusain02.09.2005@gmail.com" hidden><br>
+              <button class="button" type="button" onclick="sendemail('contact-form-2')">Send</button>
+            </form>
           </section>
         </section>
-        <section class="std-card">
+        <section id="3" class="std-card-list" style="display: none;">
           <h3>3. ABINESH R</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="4" class="std-card-list" style="display: none;">
           <h3>4. ABISORNAM M</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="5" class="std-card-list" style="display: none;">
           <h3>5. ADHITHYA PRANAVE SK</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="6" class="std-card-list" style="display: none;">
           <h3>6. AJAY P</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="7" class="std-card-list" style="display: none;">
           <h3>7. AJAY KUMAR D</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="8" class="std-card-list" style="display: none;">
           <h3>8. AKASH D</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="9" class="std-card-list" style="display: none;">
           <h3>9. AMMAR H</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="10" class="std-card-list" style="display: none;">
           <h3>10. ANIKA V</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="11" class="std-card-list" style="display: none;">
           <h3>11. ANISABARVIN A</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="12" class="std-card-list" style="display: none;">
           <h3>12. ARCHANA GURUSAMY</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="13" class="std-card-list" style="display: none;">
           <h3>13. ARUNTHATHI S</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="14" class="std-card-list" style="display: none;">
           <h3>14. ASHWIN KUMAAR D</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="15" class="std-card-list" style="display: none;">
           <h3>15. ASHWIN</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="16" class="std-card-list" style="display: none;">
           <h3>16. BALAADITHYA P</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="17" class="std-card-list" style="display: none;">
           <h3>17. BALAJI S</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="18" class="std-card-list" style="display: none;">
           <h3>18. BALASUBIRAMANIYAN P</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="19" class="std-card-list" style="display: none;">
           <h3>19. BARATH R</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="20" class="std-card-list" style="display: none;">
           <h3>20. BHARANIDHARAN S</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="21" class="std-card-list" style="display: none;">
           <h3>21. BARATH GANESH K</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="22" class="std-card-list" style="display: none;">
           <h3>22. BHAVADHARANI S</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="23" class="std-card-list" style="display: none;">
           <h3>23. BHUVANASHRI SK</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="24" class="std-card-list" style="display: none;">
           <h3>24. BOOPALAN M</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="25" class="std-card-list" style="display: none;">
           <h3>25. BRINDHAA P</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="26" class="std-card-list" style="display: none;">
           <h3>26. DEEPAK RG</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="27" class="std-card-list" style="display: none;">
           <h3>27. DEEPAK T</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="28" class="std-card-list" style="display: none;">
           <h3>28. DEEPIKA S</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="29" class="std-card-list" style="display: none;">
           <h3>29. DEEPIKA RANI K</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="30" class="std-card-list" style="display: none;">
           <h3>30. DHAKSINYAA MD</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="31" class="std-card-list" style="display: none;">
           <h3>31. DHANYA K</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="32" class="std-card-list" style="display: none;">
           <h3>32. DHARANEESH S</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="33" class="std-card-list" style="display: none;">
           <h3>33. DHARSHAN R</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="34" class="std-card-list" style="display: none;">
           <h3>34. DHIVYA S</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="35" class="std-card-list" style="display: none;">
           <h3>35. DHIVYA V</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="36" class="std-card-list" style="display: none;">
           <h3>36. DIVYA P</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="37" class="std-card-list" style="display: none;">
           <h3>37. ELAKKIYA M</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="38" class="std-card-list" style="display: none;">
           <h3>38. ELAYABHARATHI K</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="39" class="std-card-list" style="display: none;">
           <h3>39. FLINTOFF J</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="40" class="std-card-list" style="display: none;">
           <h3>40. GAYATHRI G</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="41" class="std-card-list" style="display: none;">
           <h3>41. GOKILAVANI M</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="42" class="std-card-list" style="display: none;">
           <h3>42. GOKUL K</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="43" class="std-card-list" style="display: none;">
           <h3>43. GOPALAKRISHNAN M</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="44" class="std-card-list" style="display: none;">
           <h3>44. GOPINATH P</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="45" class="std-card-list" style="display: none;">
           <h3>45. GOWSIK P</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="46" class="std-card-list" style="display: none;">
           <h3>46. GUNASEKARAPANDIYAN S</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="47" class="std-card-list" style="display: none;">
           <h3>47. HAK ASHIQ M</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="48" class="std-card-list" style="display: none;">
           <h3>48. HARINI M</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="49" class="std-card-list" style="display: none;">
           <h3>49. HEMALATHA PN</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="50" class="std-card-list" style="display: none;">
           <h3>50. IMTHIYAZ HUSAIN A</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="51" class="std-card-list" style="display: none;">
           <h3>51. JEYCHARAN P</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="52" class="std-card-list" style="display: none;">
           <h3>52. JOTHIGA S</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="53" class="std-card-list" style="display: none;">
           <h3>53. JUSTUS FABY JEYAKUMAR</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="54" class="std-card-list" style="display: none;">
           <h3>54. KAARTHIKEYAN B</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="55" class="std-card-list" style="display: none;">
           <h3>55. KAMESH J</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="56" class="std-card-list" style="display: none;">
           <h3>56. KAVIN RAJ S</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="57" class="std-card-list" style="display: none;">
           <h3>57. KAVINIYA M</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="58" class="std-card-list" style="display: none;">
           <h3>58. KAVINRAJ M</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="59" class="std-card-list" style="display: none;">
           <h3>59. KIRUTHIGA M</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <section class="std-card">
+        <section id="60" class="std-card-list" style="display: none;">
           <h3>60. KRISHNA BHARATHI P</h3>
           <section class="buttons">
-            <button class="button" onclick="att(this)">Present</button>
+            <button class="button">Send</button>
           </section>
         </section>
-        <button
-          class="AttendanceSubmit"
-          type="button"
-          onclick="sub()"
-        >
-          Submit
-        </button>
       </section>
-      <p id="output" style="margin-left: 20%"></p>
     </div>
     <div class="container-StudentList">
       <section class="studentList-sidebar">
@@ -890,790 +1272,300 @@
         <button>Marks</button>
       </section>
 
-      <section class="students-ITA">
-        <section class="std-card">
-          <h3>1. ABINAV D.S</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
+      <section class="details-students-ITA">
+        <section class="list-std-card">
+          <section style="display: flex;justify-content: space-between;">
+            <h3 style="margin: auto;margin-left: 10px;">1. ABINAV D.S</h3>
+            <section class="buttons">
+              <button onclick=showDetails(this)>
+                <img
+                  src="./images/dropdown.png"
+                  alt="dropdown"
+                  width="20px"
+                  height="20px"
+                />
+              </button>
+            </section>
           </section>
+
+          <section class="details">
+            <div ><b>Department</b> : B.TECH-IT</div>
+            <div ><b>Roll No</b> : 23IT001</div>
+            <div ><b>Valid Upto</b> : 2023-2027</div>
+            <div ><b>Blood Group</b> : O+</div>
+            <div ><b>D.O.B</b> : 18-05-2006</div>
+            <div ><b>Mobile No</b> : 9344240275</div>
+            <div ><b>Emergency Contact</b> : 9042406339</div>
+            <div ><b>Address</b> : 1/4 Fisher Road,Kamarajar Salai,Madurai 09</div>
+          </section>
+          
         </section>
-        <section class="std-card">
-          <h3>2. ABINAYASRI G</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
+        <section class="list-std-card">
+          <section style="display: flex;justify-content: space-between;">
+            <h3 style="margin: auto;margin-left: 10px;">2. ABINAYASRI G</h3>
+            <section class="buttons">
+              <button onclick=showDetails(this)>
+                <img
+                  src="./images/dropdown.png"
+                  alt="dropdown"
+                  width="20px"
+                  height="20px"
+                />
+              </button>
+            </section>
           </section>
+
+          <section class="details">
+            <div ><b>Department</b> : B.TECH-IT</div>
+            <div ><b>Roll No</b> : 23IT002</div>
+            <div ><b>Valid Upto</b> : 2023-2027</div>
+            <div ><b>Blood Group</b> : A+</div>
+            <div ><b>D.O.B</b> : 02-10-2006</div>
+            <div ><b>Mobile No</b> : 7904636377</div>
+            <div ><b>Emergency Contact</b> : 9360015310</div>
+            <div ><b>Address</b> : 852/3 Maruthupandiyar Street, E.B. Nagar,Arni,Thiruvanamalai District</div>
+          </section>
+          
         </section>
-        <section class="std-card">
-          <h3>3. ABINESH R</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
+        <section class="list-std-card">
+          <section style="display: flex;justify-content: space-between;">
+            <h3 style="margin: auto;margin-left: 10px;">3. ABINESH R</h3>
+            <section class="buttons">
+              <button onclick=showDetails(this)>
+                <img
+                  src="./images/dropdown.png"
+                  alt="dropdown"
+                  width="20px"
+                  height="20px"
+                />
+              </button>
+            </section>
           </section>
+
+          <section class="details">
+            <div ><b>Department</b> : B.TECH-IT</div>
+            <div ><b>Roll No</b> : 23IT003</div>
+            <div ><b>Valid Upto</b> : 2023-2027</div>
+            <div ><b>Blood Group</b> : O+</div>
+            <div ><b>D.O.B</b> : 06-02-2006</div>
+            <div ><b>Mobile No</b> : 6382258283</div>
+            <div ><b>Emergency Contact</b> : 9842480529</div>
+            <div ><b>Address</b> : 50/1A Sivanmurugan Nagar E.B Road Devakottai</div>
+          </section>
+          
         </section>
-        <section class="std-card">
-          <h3>4. ABISORNAM M</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
+        <section class="list-std-card">
+          <section style="display: flex;justify-content: space-between;">
+            <h3 style="margin: auto;margin-left: 10px;">4. ABISORNAM M</h3>
+            <section class="buttons">
+              <button onclick=showDetails(this)>
+                <img
+                  src="./images/dropdown.png"
+                  alt="dropdown"
+                  width="20px"
+                  height="20px"
+                />
+              </button>
+            </section>
           </section>
+
+          <section class="details">
+            <div ><b>Department</b> : B.TECH-IT</div>
+            <div ><b>Roll No</b> : 23IT004</div>
+            <div ><b>Valid Upto</b> : 2023-2027</div>
+            <div ><b>Blood Group</b> : B+</div>
+            <div ><b>D.O.B</b> : 16-07-2006</div>
+            <div ><b>Mobile No</b> : 8122562773</div>
+            <div ><b>Emergency Contact</b> : 9600364168</div>
+            <div ><b>Address</b> : No.39,Kamaraj Nagar,Melavilakkudi,Kavinadu East,Attangudi Post,Pudukkottai-622003</div>
+          </section>
+          
         </section>
-        <section class="std-card">
-          <h3>5. ADHITHYA PRANAVE SK</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
+        <section class="list-std-card">
+          <section style="display: flex;justify-content: space-between;">
+            <h3 style="margin: auto;margin-left: 10px;">5. ADHITHYA PRANAVE S.K</h3>
+            <section class="buttons">
+              <button onclick=showDetails(this)>
+                <img
+                  src="./images/dropdown.png"
+                  alt="dropdown"
+                  width="20px"
+                  height="20px"
+                />
+              </button>
+            </section>
           </section>
+
+          <section class="details">
+            <div ><b>Department</b> : B.TECH-IT</div>
+            <div ><b>Roll No</b> : 23IT005</div>
+            <div ><b>Valid Upto</b> : 2023-2027</div>
+            <div ><b>Blood Group</b> : A1+</div>
+            <div ><b>D.O.B</b> : 07-11-2005</div>
+            <div ><b>Mobile No</b> : 9342921914</div>
+            <div ><b>Emergency Contact</b> : 9894801480</div>
+            <div ><b>Address</b> : C-2, Malligai Kudiyiruppu Priyanka Avenue Avaniapuram Madurai</div>
+          </section>
+          
         </section>
-        <section class="std-card">
-          <h3>6. AJAY P</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
+        <section class="list-std-card">
+          <section style="display: flex;justify-content: space-between;">
+            <h3 style="margin: auto;margin-left: 10px;">6. AJAY P</h3>
+            <section class="buttons">
+              <button onclick=showDetails(this)>
+                <img
+                  src="./images/dropdown.png"
+                  alt="dropdown"
+                  width="20px"
+                  height="20px"
+                />
+              </button>
+            </section>
           </section>
+
+          <section class="details">
+            <div ><b>Department</b> : B.TECH-IT</div>
+            <div ><b>Roll No</b> : 23IT006</div>
+            <div ><b>Valid Upto</b> : 2023-2027</div>
+            <div ><b>Blood Group</b> : A+</div>
+            <div ><b>D.O.B</b> : 03-07-2005</div>
+            <div ><b>Mobile No</b> : 9942431773</div>
+            <div ><b>Emergency Contact</b> : 9791447936</div>
+            <div ><b>Address</b> : 12/147 Mathanagar 3rd Street, Thoothukudi</div>
+          </section>
+          
         </section>
-        <section class="std-card">
-          <h3>7. AJAY KUMAR D</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
+        <section class="list-std-card">
+          <section style="display: flex;justify-content: space-between;">
+            <h3 style="margin: auto;margin-left: 10px;">7. AJAY KUMAR D</h3>
+            <section class="buttons">
+              <button onclick=showDetails(this)>
+                <img
+                  src="./images/dropdown.png"
+                  alt="dropdown"
+                  width="20px"
+                  height="20px"
+                />
+              </button>
+            </section>
           </section>
+
+          <section class="details">
+            <div ><b>Department</b> : B.TECH-IT</div>
+            <div ><b>Roll No</b> : 23IT007</div>
+            <div ><b>Valid Upto</b> : 2023-2027</div>
+            <div ><b>Blood Group</b> : B+</div>
+            <div ><b>D.O.B</b> : 05-06-2005</div>
+            <div ><b>Mobile No</b> : 8825462123</div>
+            <div ><b>Emergency Contact</b> : 8680000263</div>
+            <div ><b>Address</b> : 1/493 LVB Nagar Last, Kadachanendhal Madurai-625107</div>
+          </section>
+          
         </section>
-        <section class="std-card">
-          <h3>8. AKASH D</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
+        <section class="list-std-card">
+          <section style="display: flex;justify-content: space-between;">
+            <h3 style="margin: auto;margin-left: 10px;">8. AKASH D</h3>
+            <section class="buttons">
+              <button onclick=showDetails(this)>
+                <img
+                  src="./images/dropdown.png"
+                  alt="dropdown"
+                  width="20px"
+                  height="20px"
+                />
+              </button>
+            </section>
           </section>
+
+          <section class="details">
+            <div ><b>Department</b> : B.TECH-IT</div>
+            <div ><b>Roll No</b> : 23IT008</div>
+            <div ><b>Valid Upto</b> : 2023-2027</div>
+            <div ><b>Blood Group</b> : A+</div>
+            <div ><b>D.O.B</b> : 29-05-2006</div>
+            <div ><b>Mobile No</b> : 7010861975</div>
+            <div ><b>Emergency Contact</b> : 6382680466</div>
+            <div ><b>Address</b> : 104, Cuddalore Main Road, Kuyilapalayam, PV Natham (Post), Panruti Taluk-607102</div>
+          </section>
+          
         </section>
-        <section class="std-card">
-          <h3>9. AMMAR H</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
+        <section class="list-std-card">
+          <section style="display: flex;justify-content: space-between;">
+            <h3 style="margin: auto;margin-left: 10px;">9. AMMAR H</h3>
+            <section class="buttons">
+              <button onclick=showDetails(this)>
+                <img
+                  src="./images/dropdown.png"
+                  alt="dropdown"
+                  width="20px"
+                  height="20px"
+                />
+              </button>
+            </section>
           </section>
+
+          <section class="details">
+            <div ><b>Department</b> : B.TECH-IT</div>
+            <div ><b>Roll No</b> : 23IT009</div>
+            <div ><b>Valid Upto</b> : 2023-2027</div>
+            <div ><b>Blood Group</b> : A+ </div>
+            <div ><b>D.O.B</b> : 13-12-2005</div>
+            <div ><b>Mobile No</b> : 7825911600</div>
+            <div ><b>Emergency Contact</b> : 9087587468</div>
+            <div ><b>Address</b> : 71, Athiyadi West Street </div>
+          </section>
+          
         </section>
-        <section class="std-card">
-          <h3>10. ANIKA V</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
+        <section class="list-std-card">
+          <section style="display: flex;justify-content: space-between;">
+            <h3 style="margin: auto;margin-left: 10px;">10. ANIKA V</h3>
+            <section class="buttons">
+              <button onclick=showDetails(this)>
+                <img
+                  src="./images/dropdown.png"
+                  alt="dropdown"
+                  width="20px"
+                  height="20px"
+                />
+              </button>
+            </section>
           </section>
-        </section>
-        <section class="std-card">
-          <h3>11. ANISABARVIN A</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
+
+          <section class="details">
+            <div ><b>Department</b> : B.TECH-IT</div>
+            <div ><b>Roll No</b> : 23IT010</div>
+            <div ><b>Valid Upto</b> : 2023-2027</div>
+            <div ><b>Blood Group</b> : B+</div>
+            <div ><b>D.O.B</b> : 07-06-2006</div>
+            <div ><b>Mobile No</b> : 6385415861</div>
+            <div ><b>Emergency Contact</b> : 9894144376</div>
+            <div ><b>Address</b> : 70, Anjaneyar Colony, Ondipudur, Coimbatore-16</div>
           </section>
-        </section>
-        <section class="std-card">
-          <h3>12. ARCHANA GURUSAMY</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>13. ARUNTHATHI S</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>14. ASHWIN KUMAAR D</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>15. ASHWIN</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>16. BALAADITHYA P</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>17. BALAJI S</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>18. BALASUBIRAMANIYAN P</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>19. BARATH R</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>20. BHARANIDHARAN S</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>21. BARATH GANESH K</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>22. BHAVADHARANI S</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>23. BHUVANASHRI SK</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>24. BOOPALAN M</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>25. BRINDHAA P</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>26. DEEPAK RG</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>27. DEEPAK T</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>28. DEEPIKA S</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>29. DEEPIKA RANI K</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>30. DHAKSINYAA MD</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>31. DHANYA K</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>32. DHARANEESH S</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>33. DHARSHAN R</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>34. DHIVYA S</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>35. DHIVYA V</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>36. DIVYA P</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>37. ELAKKIYA M</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>38. ELAYABHARATHI K</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>39. FLINTOFF J</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>40. GAYATHRI G</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>41. GOKILAVANI M</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>42. GOKUL K</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>43. GOPALAKRISHNAN M</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>44. GOPINATH P</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>45. GOWSIK P</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>46. GUNASEKARAPANDIYAN S</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>47. HAK ASHIQ M</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>48. HARINI M</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>49. HEMALATHA PN</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>50. IMTHIYAZ HUSAIN A</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>51. JEYCHARAN P</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>52. JOTHIGA S</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>53. JUSTUS FABY JEYAKUMAR</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>54. KAARTHIKEYAN B</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>55. KAMESH J</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>56. KAVIN RAJ S</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>57. KAVINIYA M</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>58. KAVINRAJ M</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>59. KIRUTHIGA M</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
-        </section>
-        <section class="std-card">
-          <h3>60. KRISHNA BHARATHI P</h3>
-          <section class="buttons">
-            <button>
-              <img
-                src="./images/dropdown.png"
-                alt="dropdown"
-                width="20px"
-                height="20px"
-              />
-            </button>
-          </section>
+          
         </section>
       </section>
     </div>
     <script src="./index.js"></script>
+    <script>
+      function sendemail(formId) {
+      var form = document.getElementById(formId);
+      var email = form.querySelector('input[name="email"]').value;
+      var to_name = form.querySelector('input[name="name"]').value;
+
+      var templateParams = {
+        email: email,
+        to_name: to_name,
+      };
+
+      emailjs.send('service_w96dhsj', 'template_caabghn', templateParams)
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+          window.alert("Sent successfully!");
+        }, function(error) {
+          console.log('FAILED...', error);
+          window.alert("Failed to send email.");
+        });
+    }
+    </script>
   </body>
 </html>
- 

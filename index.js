@@ -96,7 +96,7 @@ function displayDashboard() {
   let studentListButton = document.querySelector("a:nth-child(3)");
   studentListButton.style.boxShadow = "none";
   let dashboardButton = document.querySelector("a:nth-child(1)");
-  dashboardButton.style.boxShadow="inset 0px -3px 0px #32d583"  ;
+  dashboardButton.style.boxShadow = "inset 0px -3px 0px #32d583";
   dashboardButton.style.transition = "all 0.30s";
 }
 
@@ -110,7 +110,7 @@ function displayAttendance() {
   let studentListButton = document.querySelector("a:nth-child(3)");
   studentListButton.style.boxShadow = "none";
   let attendanceButton = document.querySelector("a:nth-child(2)");
-  attendanceButton.style.boxShadow="inset 0px -3px 0px #32d583"  ;
+  attendanceButton.style.boxShadow = "inset 0px -3px 0px #32d583";
   attendanceButton.style.transition = "all 0.30s";
 }
 
@@ -124,7 +124,7 @@ function displayStudentList() {
   let attendanceButton = document.querySelector("a:nth-child(2)");
   attendanceButton.style.boxShadow = "none";
   let studentListButton = document.querySelector("a:nth-child(3)");
-  studentListButton.style.boxShadow="inset 0px -3px 0px #32d583"  ;
+  studentListButton.style.boxShadow = "inset 0px -3px 0px #32d583";
   studentListButton.style.transition = "all 0.30s";
 }
 
@@ -147,19 +147,29 @@ function sideBarClose() {
   cancel.style.display = "none";
 }
 
-let presentCount = parseInt(document.querySelector(".total-students-count").textContent);
+let presentCount = parseInt(
+  document.querySelector(".total-students-count").textContent
+);
 let absentCount = 0;
 
-function att(button) {
+function att(button,listId) {
   button.classList.toggle("red");
   if (button.innerHTML === "Absent") {
-      button.innerHTML = "Present";
-      presentCount++;
-      absentCount--;
+    button.innerHTML = "Present";
+    presentCount++;
+    absentCount--;
   } else {
-      button.innerHTML ="Absent";
-      presentCount--;
-      absentCount++;
+    button.innerHTML = "Absent";
+    presentCount--;
+    absentCount++;
+  }
+  var listElement = document.getElementById(listId);
+  if (listElement) {
+    if (listElement.style.display === 'none') {
+      listElement.style.display = 'flex';
+    } else {
+      listElement.style.display = 'none';
+    }
   }
 }
 function sub() {
@@ -172,4 +182,36 @@ function sub() {
 function show() {
   let output = document.getElementById("output");
   output.innerHTML = "Present: " + presentCount + ", Absent: " + absentCount;
+}
+
+function showDetails(button) {
+  // Find the closest std-card ancestor of the clicked button
+  const card = button.closest(".list-std-card");
+
+  // Toggle the 'expanded' class on the card
+  card.classList.toggle("expanded");
+}
+
+function showAttendance() {
+  let attendanceSection = document.querySelector(".Attendance");
+  attendanceSection.style.display = "block";
+  let absenteesSection = document.querySelector(".Absentees");
+  absenteesSection.style.display = "none";
+  let attBackColor = document.querySelector(".attBackColor");
+  attBackColor.style.backgroundColor = "#32d5835e";
+  attBackColor.style.transition = "all 0.25s";
+  let absentBackColor = document.querySelector(".absentBackColor");
+  absentBackColor.style.backgroundColor = "transparent";
+}
+
+function showAbsentees() {
+  let attendanceSection = document.querySelector(".Attendance");
+  attendanceSection.style.display = "none";
+  let absenteesSection = document.querySelector(".Absentees");
+  absenteesSection.style.display = "block";
+  let attBackColor = document.querySelector(".attBackColor");
+  attBackColor.style.backgroundColor = "transparent";
+  let absentBackColor = document.querySelector(".absentBackColor");
+  absentBackColor.style.backgroundColor = "#32d5835e";
+  absentBackColor.style.transition = "all 0.25s";
 }

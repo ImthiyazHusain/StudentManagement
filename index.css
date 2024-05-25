@@ -334,7 +334,7 @@ nav {
   }
 }
 
-.atttendance-sidebar  ,.studentList-sidebar{
+.attendance-sidebar  ,.studentList-sidebar{
   position: fixed;
   top: 50px;
   left: 0px;
@@ -356,12 +356,17 @@ nav {
   button:first-child {
     background-color: #32d5835e;
   }
-  :hover {
-    background-color: #ffffff27;
-  }
 }
 
-.std-card {
+.Attendance{
+  display: block;
+  margin-left: 14.5%;
+}
+.Absentees{
+  display: none;
+  margin-left: 14.5%;
+}
+.std-card,.std-card-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -371,7 +376,8 @@ nav {
   border-radius: 10px;
   box-shadow: 0px 0px 5px gray;
 }
-.std-card .button{
+
+.std-card .button,.std-card-list .button{
   width: 90px;
   border: none;
   color: white;
@@ -383,9 +389,24 @@ nav {
   border-radius: 8px;
   background-color: #32d583;
 }
-.std-card .button.red {
+.std-card .button.red,.std-card-list .button.red {
   background-color: #f44336;
 }
+
+.std-card-list.display{
+  display: block;
+}
+
+.list-std-card.expanded {
+  max-height: 4000px; /* Adjust based on the content with the details */
+  padding-bottom: 20px; /* Add extra padding when expanded */
+}
+
+.list-std-card.expanded .details {
+  opacity: 1;
+  max-height: 5000px; /* Adjust based on the content height */
+}
+
 
 .AttendanceSubmit{
   padding: 10px 22px;
@@ -403,17 +424,35 @@ nav {
   border: 1px solid rgb(70, 70, 70);
 }
 
-.students-ITA {
+.Att-students-ITA {
+  padding: 20px;
+  
+}
+
+.details-students-ITA {
   padding: 20px;
   margin-left: 14%;
 }
 
-.day-period {
-  margin: 20px auto auto 16%;
+.details {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 1s ease, max-height 0s ease;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 20px;
+  div{
+    padding: 10px;
+  }
 }
 
-.std-card {
-  display: flex;
+.day-period {
+  margin: 20px auto auto 0px;
+}
+
+.list-std-card {
+  display: block;
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
@@ -536,7 +575,7 @@ nav {
   .query-hod {
     margin-top: 15px;
   }
-  .atttendance-sidebar , .studentList-sidebar{
+  .attendance-sidebar , .studentList-sidebar{
     position: fixed;
     left: 0px;
     width: 100%;
@@ -554,9 +593,15 @@ nav {
     margin:auto;
   }
   .day-period {
-    margin: 85px auto 0px 32px;
+    margin: 20px auto 0px 32px;
   }
   .container-StudentList{
     margin-top: 60px;
+  }
+  .Att-students-ITA{
+    margin: 0px;
+  }
+  .Attendance{
+    margin: 0px;
   }
 } 
