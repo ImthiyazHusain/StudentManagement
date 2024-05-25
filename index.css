@@ -604,4 +604,13 @@ nav {
   .Attendance{
     margin: 0px;
   }
+  .Absentees{
+    margin-left: 0px;
+    margin-top: 40px;
+    padding: 20px;
+  }
+  .details-students-ITA {
+    padding: 20px;
+    margin-left: 0px;
+  }
 } 
