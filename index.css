@@ -613,4 +613,7 @@ nav {
     padding: 20px;
     margin-left: 0px;
   }
+  .details{
+    grid-template-columns: 1fr 1fr;
+  }
 } 
