@@ -441,6 +441,7 @@ nav {
 .Att-students-ITA {
   padding: 20px;
   button{
+    text-align: center;
     margin: 12px;
     padding: 10px 22px;
     background-color: rgb(255, 199, 57);
@@ -448,6 +449,7 @@ nav {
     border-radius: 8px;
     margin: 20px 0px;
     cursor: pointer;
+    width: 90px;
   }
 .student {
   font-weight: bold;
@@ -464,7 +466,6 @@ nav {
     border-radius: 5px;
     color: #fff;
     cursor: pointer; /* Make the status span look like a button */
-    width: 90px;
 }
 .present {
     background-color: #32d583;
