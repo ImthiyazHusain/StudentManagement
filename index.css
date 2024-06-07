@@ -440,7 +440,29 @@ nav {
 
 .Att-students-ITA {
   padding: 20px;
-  
+  .student {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer; /* Make the status span look like a button */
+}
+.present {
+    background-color: #28a745;
+}
+.absent {
+    background-color: #dc3545;
+}
+.summary {
+    margin-top: 20px;
+}
 }
 
 .details-students-ITA {

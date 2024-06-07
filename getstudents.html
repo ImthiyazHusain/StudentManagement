@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance</title>
+    <style>
+        .student {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .student:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+        .status {
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer; /* Make the status span look like a button */
+        }
+        .present {
+            background-color: #28a745;
+        }
+        .absent {
+            background-color: #dc3545;
+        }
+        .summary {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Attendance</h1>
+    <div id="students-list">
+        <!-- Student data will be inserted here -->
+    </div>
+    <button onclick="calculateAttendance()">Submit</button>
+    <div id="summary" class="summary"></div>
+
+    <script>
+        let studentsData = [];
+
+        // Function to fetch data from the server
+        function fetchStudents() {
+            fetch('getStudents.php')
+                .then(response => response.json())
+                .then(data => {
+                    studentsData = data;
+                    const studentsList = document.getElementById('students-list');
+
+                    // Clear existing content
+                    studentsList.innerHTML = '';
+
+                    data.forEach(student => {
+                        const studentDiv = document.createElement('div');
+                        studentDiv.className = 'student';
+
+                        const nameSpan = document.createElement('span');
+                        nameSpan.textContent = student.id + '. ' + student.name;
+                        studentDiv.appendChild(nameSpan);
+
+                        const statusSpan = document.createElement('span');
+                        statusSpan.textContent = student.attendance_status;
+                        statusSpan.className = `status ${student.attendance_status.toLowerCase()}`;
+                        statusSpan.addEventListener('click', () => {
+                            student.attendance_status = student.attendance_status === 'Present' ? 'Absent' : 'Present';
+                            statusSpan.textContent = student.attendance_status;
+                            statusSpan.className = `status ${student.attendance_status.toLowerCase()}`;
+                        });
+                        studentDiv.appendChild(statusSpan);
+
+                        studentsList.appendChild(studentDiv);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        }
+
+        // Function to calculate attendance
+        function calculateAttendance() {
+            let presentCount = 0;
+            let absentCount = 0;
+
+            studentsData.forEach(student => {
+                if (student.attendance_status === 'Present') {
+                    presentCount++;
+                } else {
+                    absentCount++;
+                }
+            });
+
+            const summaryDiv = document.getElementById('summary');
+            summaryDiv.innerHTML = `Present: ${presentCount}<br>Absent: ${absentCount}`;
+        }
+
+        // Fetch data when the page loads
+        window.onload = fetchStudents;
+    </script>
+</body>
+</html>
