@@ -463,11 +463,12 @@ nav {
 }
 .status {
     padding: 5px 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     color: #fff;
     cursor: pointer; /* Make the status span look like a button */
     width: 70px;
     text-align: center;
+    margin-top: -5px;
 }
 .present {
     background-color: #32d583;
