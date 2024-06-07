@@ -438,7 +438,7 @@ nav {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transition: opacity 1s ease, max-height 0s ease;
+  transition: opacity 0.5s ease, max-height 0s ease;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-left: 20px;
