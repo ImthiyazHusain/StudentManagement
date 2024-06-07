@@ -455,7 +455,7 @@ nav {
   font-weight: bold;
   display: flex;
   justify-content: space-between;
-  padding: 20px auto auto auto;
+  padding: 20px 15px 15px 15px;
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 10px;
