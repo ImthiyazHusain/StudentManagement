@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root"; // default XAMPP username
 $password = ""; // default XAMPP password (empty)
-$dbname = "attendance"; // your database name
+$dbname = "it-a"; // your database name
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 // SQL query
-$sql = "SELECT id, name, attendance_status FROM students"; // assuming 'attendance_status' is the column for attendance
+$sql = "SELECT id, name, attendance_status FROM students070624"; // assuming 'attendance_status' is the column for attendance
 $result = $conn->query($sql);
 
 $data = array();
