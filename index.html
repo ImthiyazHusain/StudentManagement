@@ -16,11 +16,6 @@
   </head>
   <body>
     <section class="top">
-      <!--
-            it is a section which is present in the top of the page (always)
-            consists of logo opptions like DASHBOARD,ATTEDENCE,STUDENTS LIST REPORTS
-            top is flex container child's = title-side-left & search
-        -->
       <nav>
         <section class="title-side-left">
           <img src="./images/logo.png" alt="logo" width="40px" height="auto" />
@@ -117,11 +112,8 @@
           margin-top: -100px;
         "
       ></section>
-      <!-- just a top dark section for good look -->
       <section class="contents" style="margin-top: -100px">
-        <!-- the content section contains all other elements of the page (real body part of the page)-->
         <section class="select_class_time">
-          <!-- This is the select option (Class,Time) in the top left -->
           <select>
             <option value="Class" id="Class-none" disabled>Class</option>
             <hr />
@@ -139,9 +131,6 @@
         </section>
 
         <section class="overall-details">
-          <!--Overall-deatails consists of total sudents , present , absent , on duty 
-            details and it is horizontaly displayed (flex)
-        -->
           <section class="total-students">
             <div class="icon">
               <svg
@@ -326,7 +315,6 @@
           </section>
         </section>
         <section class="chart-row1">
-          <!-- This section contains 2 parts which will display charts-->
           <section class="Attendance-chart">
             <h3>TOTAL ATTENDANCE GRAPH</h3>
             <div class="graph">
@@ -343,9 +331,6 @@
         </section>
 
         <section class="chart-row2">
-          <!--This section contains 3 parts.This section is also named 
-            as chart so it can use the previous written css style 
-        -->
           <section class="studentByGender">
             <h3>STUDENTS BY GENDER</h3>
             <div class="graph-row2">
@@ -467,7 +452,6 @@
         </section>
 
         <section class="notice-info">
-          <!-- This section used as a notice board and for teachers to write query to the HOD-->
           <section class="notice-hod">
             <h3>NOTICE (HOD)</h3>
             <p style="text-align: center; margin-top: 20%">NO INFORMATION</p>
@@ -502,9 +486,7 @@
       <section class="Attendance">
 
         <section class="day-period">
-          <select name="day" id="day">
-            <option value="today">Today</option>
-          </select>
+          <input type="date">
           <select name="period" id="period" onchange="toggleButton()">
             <option value="">period</option>
             <hr />
@@ -516,6 +498,9 @@
             <option value="6st">6st</option>
             <option value="7st">7st</option>
             <option value="8st">8st</option>
+          </select>
+          <select name="subject" id="subject">
+            <option value="subject">Subject</option>
           </select>
         </section>
 

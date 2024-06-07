@@ -168,13 +168,26 @@ nav {
 .cancel {
   display: none;
 }
+
+.day-period,.select_class_time {
+  margin: 20px auto auto 0px;
+  select,input{
+    margin: 10px auto auto 10px;
+    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid #121927b9;
+  }
+}
+
 .select_class_time {
   margin: 20px 55px;
 }
 .select_class_time select {
+  margin: auto;
   cursor: pointer;
   background-color: #121927;
   color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.425);
 }
 
 .overall-details {
@@ -445,10 +458,6 @@ nav {
   div{
     padding: 10px;
   }
-}
-
-.day-period {
-  margin: 20px auto auto 0px;
 }
 
 .list-std-card {
