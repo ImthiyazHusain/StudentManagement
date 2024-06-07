@@ -176,6 +176,7 @@ nav {
     padding: 3px;
     border-radius: 5px;
     border: 1px solid #121927b9;
+    cursor: pointer;
   }
 }
 
