@@ -147,42 +147,6 @@ function sideBarClose() {
   cancel.style.display = "none";
 }
 
-let presentCount = parseInt(
-  document.querySelector(".total-students-count").textContent
-);
-let absentCount = 0;
-
-function att(button,listId) {
-  button.classList.toggle("red");
-  if (button.innerHTML === "Absent") {
-    button.innerHTML = "Present";
-    presentCount++;
-    absentCount--;
-  } else {
-    button.innerHTML = "Absent";
-    presentCount--;
-    absentCount++;
-  }
-  var listElement = document.getElementById(listId);
-  if (listElement) {
-    if (listElement.style.display === 'none') {
-      listElement.style.display = 'flex';
-    } else {
-      listElement.style.display = 'none';
-    }
-  }
-}
-function sub() {
-  show();
-  let Present = document.getElementById("present-today-number");
-  Present.innerHTML = presentCount;
-  let Absent = document.getElementById("absent-today-number");
-  Absent.innerHTML = absentCount;
-}
-function show() {
-  let output = document.getElementById("output");
-  output.innerHTML = "Present: " + presentCount + ", Absent: " + absentCount;
-}
 
 function showDetails(button) {
   // Find the closest std-card ancestor of the clicked button
@@ -215,3 +179,4 @@ function showAbsentees() {
   absentBackColor.style.backgroundColor = "#32d5835e";
   absentBackColor.style.transition = "all 0.25s";
 }
+
